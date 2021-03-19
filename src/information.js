@@ -1,9 +1,6 @@
-import React from 'react'
-import App from './App'
+import React from 'react';
+import App from './App';
 
-const information = () => {
+const information = () => {};
 
-}
-
-
-export default App
+export default App;
