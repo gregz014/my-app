@@ -1,4 +1,6 @@
 <h1>How to setup my app</h1>
-<h2>Clone the App</h2>
-run "npm install" in cmd
-run "npm start"
+<ul>
+  <li>Clone the App</li>
+  <li>run "npm install" in cmd</li>
+  <li>run "npm start"</li>
+</ul>
