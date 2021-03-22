@@ -4,12 +4,3 @@
   <li>run "npm install" in cmd</li>
   <li>run "npm start"</li>
 </ul>
-
-<style>
-  
-  h1 {
-  color: red;
-  }
-  
-  
-  </style>
