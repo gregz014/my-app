@@ -1,38 +1,45 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { Menu } from 'semantic-ui-react';
+
+import Navbar from './components/Navbar';
+import HomePage from './pages/Home';
+import AboutPage from './pages/About';
+import ContactPage from './pages/Contact';
+import UsersPage from './pages/UsersPage';
+import PhotosPage from './pages/PhotosPage';
+
+import './App.scss';
 
 const App = () => {
-  const [count, setCount] = useState(0);
-  const [user, setUser] = useState('');
-
-  const increment = () => {
-    setCount(count + 1);
-  };
-  const reduction = () => {
-    setCount(count - 1);
-  };
-  const handleOnChange = (e) => {
-    setUser(e.target.value);
-  };
-  console.log('user: ', user);
-
   return (
-    <React.Fragment>
-      <div>Count: {count}</div>
-      <button onClick={increment}>Increment</button>
-      <button onClick={reduction}>Reduction</button>
-      <br />
-      <input name="user" onChange={handleOnChange} value={user} />
+    <BrowserRouter>
+      <div className="root-page">
+        <Navbar />
+        <div className="root-page__content">
+          <Switch>
+            <Route path="/home">
+              <HomePage />
+            </Route>
 
-      <div className="app-main">
-        <div className="information">
-          <h1>Basic Information</h1>
-          <div>Name: Greg S. Trillanes</div>
-          <div>Age: 25</div>
-          <div>Gender: Male</div>
-          <div>Contact#: 0955-439-5527</div>
+            <Route path="/about">
+              <AboutPage />
+            </Route>
+
+            <Route path="/contact">
+              <ContactPage />
+            </Route>
+
+            <Route path="/users">
+              <UsersPage />
+            </Route>
+            <Route path="/photos">
+              <PhotosPage />
+            </Route>
+          </Switch>
         </div>
       </div>
-    </React.Fragment>
+    </BrowserRouter>
   );
 };
 

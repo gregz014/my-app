@@ -3,4 +3,4 @@ import App from './App';
 
 const information = () => {};
 
-export default App;
+export default information;
